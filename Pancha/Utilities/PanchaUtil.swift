@@ -4,10 +4,10 @@ import Foundation
 
 class Pancha{
     
-    class var defaults:NSUserDefaults{
+    class var defaults:UserDefaults{
         
         get{
-            return NSUserDefaults.standardUserDefaults()
+            return UserDefaults.standard
         }
         
     }
