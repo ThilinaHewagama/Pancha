@@ -16,7 +16,7 @@ s.framework = 'Foundation'
  
   s.ios.deployment_target = '10.0'
   s.requires_arc = true
-  s.source_files  = "Pancha/**/*.{swift}"
+  s.source_files  = "Pancha/Source Files/**/*.{swift}"
   #s.resource  = "Pancha/**/*.{png.jpeg.jpg.storyboard,xib}"
  
 end

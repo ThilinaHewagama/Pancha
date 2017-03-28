@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CCD401C11E88D6CC000D5B88"
-               BuildableName = "Pancha.framework"
+               BlueprintIdentifier = "CC79D0E91E8A103000C9204A"
+               BuildableName = "Pancha.app"
                BlueprintName = "Pancha"
                ReferencedContainer = "container:Pancha.xcodeproj">
             </BuildableReference>
@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CC79D0E91E8A103000C9204A"
+            BuildableName = "Pancha.app"
+            BlueprintName = "Pancha"
+            ReferencedContainer = "container:Pancha.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCD401C11E88D6CC000D5B88"
-            BuildableName = "Pancha.framework"
+            BlueprintIdentifier = "CC79D0E91E8A103000C9204A"
+            BuildableName = "Pancha.app"
             BlueprintName = "Pancha"
             ReferencedContainer = "container:Pancha.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,15 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCD401C11E88D6CC000D5B88"
-            BuildableName = "Pancha.framework"
+            BlueprintIdentifier = "CC79D0E91E8A103000C9204A"
+            BuildableName = "Pancha.app"
             BlueprintName = "Pancha"
             ReferencedContainer = "container:Pancha.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
