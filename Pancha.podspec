@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Pancha'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Collection of reusable utility methods and classes.'
  
   s.description      = <<-DESC
