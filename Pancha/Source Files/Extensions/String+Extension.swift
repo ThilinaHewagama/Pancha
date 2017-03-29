@@ -24,7 +24,7 @@ public extension String{
         return randomString
     }
     
-    var dateValue:Date?{
+    public var dateValue:Date?{
         
         get{
             
@@ -63,7 +63,7 @@ public extension String{
         
     }
     
-    var length: Int {
+    public var length: Int {
         
         get {
             return self.characters.count
@@ -71,7 +71,7 @@ public extension String{
 
     }
     
-    var range: NSRange {
+    public var range: NSRange {
         
         get {
             return NSRange(location: 0, length: self.length)
@@ -79,11 +79,11 @@ public extension String{
         
     }
     
-    func trim()->String{
+    public func trim()->String{
         return self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
     }
     
-    func contains(s: String) -> Bool{
+    public func contains(s: String) -> Bool{
         return (self.range(of: s) != nil) ? true : false
     }
     
@@ -91,7 +91,7 @@ public extension String{
         return object is String
     }
     
-    var url:NSURL?{
+    public var url:NSURL?{
         
         get{
              return NSURL(string: self)
@@ -99,7 +99,7 @@ public extension String{
         
     }
     
-    var pushToken:String{
+    public var pushToken:String{
        
         get{
             let token = self.trimmingCharacters(in: CharacterSet(charactersIn: "<>"))
@@ -108,7 +108,7 @@ public extension String{
         
     }
 
-    var number:NSNumber?{
+    public var number:NSNumber?{
         
         get{
             let numberFormatter = NumberFormatter()
@@ -118,13 +118,13 @@ public extension String{
         
     }
     
-    func isEqualToStringIgnoreCase(string:String)->Bool{
+    public func isEqualToStringIgnoreCase(string:String)->Bool{
         return (self.caseInsensitiveCompare(string) == ComparisonResult.orderedSame)
     }
     
     //MARK: Validators
     
-    var isValidURL:Bool{
+    public var isValidURL:Bool{
         
         get{
             let url = NSURL(string: self)
@@ -137,7 +137,7 @@ public extension String{
         
     }
     
-    var isEmpty:Bool{
+    public var isEmpty:Bool{
         
         get{
             return (self == "")

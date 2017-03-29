@@ -10,7 +10,7 @@ import Foundation
 
 public extension FileManager {
 
-    class var documentDirectoryPath:String{
+    public class var documentDirectoryPath:String{
         
         get{
             var paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [String]
@@ -19,7 +19,7 @@ public extension FileManager {
         
     }
     
-    class var applicationSupportDirectoryPath:String{
+    public class var applicationSupportDirectoryPath:String{
         
         get{
             var paths = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true) as [String]
@@ -28,7 +28,7 @@ public extension FileManager {
         
     }
     
-    class var cacheDirectoryPath:String{
+    public class var cacheDirectoryPath:String{
         
         get{
            

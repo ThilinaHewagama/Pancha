@@ -10,7 +10,6 @@ import Foundation
 
 public extension Date{
     
-    
     //subscripts
     
     subscript(format:String)->String{
@@ -67,7 +66,7 @@ public extension Date{
         
     }
     
-    var iso8681Timestamp:String{
+    public var iso8681Timestamp:String{
         
         get{
             return self.stringWithFormat(format: "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'")
@@ -75,7 +74,7 @@ public extension Date{
         
     }
     
-    var year:Int {
+    public var year:Int {
         
         get{
             
@@ -86,7 +85,7 @@ public extension Date{
         
     }
     
-    var month:Int {
+    public var month:Int {
         
         get{
             let units:Set<Calendar.Component> = [.month]
@@ -95,7 +94,7 @@ public extension Date{
         
     }
     
-    var monthName:String{
+    public var monthName:String{
         
         get{
             return Date.monthName(monthIndex: self.month)
@@ -103,7 +102,7 @@ public extension Date{
         
     }
     
-    var weekOfYear:Int{
+    public var weekOfYear:Int{
         
         get{
             let units:Set<Calendar.Component> = [.weekOfYear]
@@ -112,7 +111,7 @@ public extension Date{
         
     }
     
-    var weekOfMonth:Int{
+    public var weekOfMonth:Int{
         
         get{
             let units:Set<Calendar.Component> = [.weekOfMonth]
@@ -121,7 +120,7 @@ public extension Date{
         
     }
     
-    var dayInWeek:Int{
+    public var dayInWeek:Int{
         
         get{
             let units:Set<Calendar.Component> = [.weekday]
@@ -130,7 +129,7 @@ public extension Date{
         
     }
     
-    var weekDayOrdinal:Int{//1-7->1, 8-14->2..etc
+    public var weekDayOrdinal:Int{//1-7->1, 8-14->2..etc
         
         get{
             let units:Set<Calendar.Component> = [.weekdayOrdinal]
@@ -139,7 +138,7 @@ public extension Date{
         
     }
     
-    var day:Int {
+    public var day:Int {
         
         get{
             let units:Set<Calendar.Component> = [.day]
@@ -148,7 +147,7 @@ public extension Date{
         
     }
     
-    var dayName:String{
+    public var dayName:String{
         
         get{
             return Date.dayName(dayIndex: self.day)
@@ -156,7 +155,7 @@ public extension Date{
         
     }
     
-    var hour:Int {
+    public var hour:Int {
         
         get{
             let units:Set<Calendar.Component> = [.hour]
@@ -165,7 +164,7 @@ public extension Date{
         
     }
     
-    var minute:Int {
+    public var minute:Int {
         
         get{
             let units:Set<Calendar.Component> = [.minute]
@@ -174,7 +173,7 @@ public extension Date{
         
     }
     
-    var second:Int {
+    public var second:Int {
         
         get{
             let units:Set<Calendar.Component> = [.second]
@@ -184,7 +183,7 @@ public extension Date{
     }
     
     
-    var nextDay:Date{
+    public var nextDay:Date{
         
         get{
             return self.date(byAddingYears: 0, months: 0, days: 1) as Date
@@ -192,7 +191,7 @@ public extension Date{
         
     }
     
-    var nextWorkingDay:Date{
+    public var nextWorkingDay:Date{
         
         get{
             var nextDay = self.nextDay
@@ -205,7 +204,7 @@ public extension Date{
         
     }
     
-    var previousDay:Date{
+    public var previousDay:Date{
         
         get{
             return self.date(byAddingYears: 0, months: 0, days: -1)
@@ -213,7 +212,7 @@ public extension Date{
         
     }
     
-    var nextWeek:Date{
+    public var nextWeek:Date{
         
         get{
             return self.date(byAddingWeeks: 1)
@@ -221,7 +220,7 @@ public extension Date{
         
     }
     
-    var previousWeek:Date{
+    public var previousWeek:Date{
         
         get{
             return self.date(byAddingWeeks: -1)
@@ -229,7 +228,7 @@ public extension Date{
         
     }
     
-    var nextMonth:Date{
+    public var nextMonth:Date{
         
         get{
             return self.date(byAddingYears: 0, months: 1, days: 0)
@@ -237,7 +236,7 @@ public extension Date{
         
     }
     
-    var previousMonth:Date{
+    public var previousMonth:Date{
         
         get{
             return self.date(byAddingYears: 0, months: -1, days: 0)
@@ -245,7 +244,7 @@ public extension Date{
         
     }
     
-    func stringWithFormat(format:String)->String{
+    public func stringWithFormat(format:String)->String{
         
         
         let dateFormatter:DateFormatter = DateFormatter()
@@ -256,11 +255,11 @@ public extension Date{
         
     }
     
-    func printDateInCurrentLocale(){
+    public func printDateInCurrentLocale(){
         print(self.description(with: Locale.current))
     }
     
-    func date(byAddingYears years:Int, months:Int, days:Int)->Date{
+    public func date(byAddingYears years:Int, months:Int, days:Int)->Date{
         
         
         var dateComponents = DateComponents()
@@ -274,7 +273,7 @@ public extension Date{
         
     }
     
-    func date(byAddingHours hours:Int, minutes:Int, seconds:Int)->Date{
+    public func date(byAddingHours hours:Int, minutes:Int, seconds:Int)->Date{
         
         
         var dateComponents = DateComponents()
@@ -288,7 +287,7 @@ public extension Date{
     }
     
     
-    func date(byAddingWeeks weeks:Int)->Date{
+    public func date(byAddingWeeks weeks:Int)->Date{
         
         
         var dateComponents = DateComponents()
@@ -302,7 +301,7 @@ public extension Date{
     
     
     //only date
-    var onlyDate:Date{
+    public var onlyDate:Date{
         
         get{
             let calendar = Calendar.current
@@ -319,7 +318,7 @@ public extension Date{
     }
     
     //only time
-    var onlyTime:Date{
+    public var onlyTime:Date{
         
         get{
             let calendar = Calendar.current
@@ -357,7 +356,7 @@ public extension Date{
      
      */
     
-    var isYesterday:Bool{
+    public var isYesterday:Bool{
         
         get{
             let date:Date = Date().date(byAddingYears: 0, months: 0, days: -1)
@@ -366,7 +365,7 @@ public extension Date{
         
     }
     
-    var isToday:Bool{
+    public var isToday:Bool{
         
         get{
             return self.isSameDate(date: Date())
@@ -374,7 +373,7 @@ public extension Date{
         
     }
     
-    var isTomorrow:Bool{
+    public var isTomorrow:Bool{
         
         get{
             let date:Date = Date().date(byAddingYears: 0, months: 0, days: 1)
@@ -383,7 +382,7 @@ public extension Date{
         
     }
     
-    var isLastMonth:Bool{
+    public var isLastMonth:Bool{
         
         get{
             let date:Date = Date().date(byAddingYears: 0, months: -1, days: 0)
@@ -392,7 +391,7 @@ public extension Date{
         
     }
     
-    var isThisMonth:Bool{
+    public var isThisMonth:Bool{
         
         get{
             return self.isSameMonth(date: Date())
@@ -400,7 +399,7 @@ public extension Date{
         
     }
     
-    var isNextMonth:Bool{
+    public var isNextMonth:Bool{
         
         get{
             let date:Date = Date().date(byAddingYears: 0, months: 1, days: 0)
@@ -409,7 +408,7 @@ public extension Date{
         
     }
     
-    var isThisYear:Bool{
+    public var isThisYear:Bool{
         
         get{
             return self.isSameYear(date: Date())
@@ -417,32 +416,32 @@ public extension Date{
         
     }
     
-    func isSameDate(date:Date)->Bool{
+    public func isSameDate(date:Date)->Bool{
         
         let equalDays:Bool = (self.day == date.day)
         return (equalDays && self.isSameMonth(date: date))
         
     }
     
-    func isSameWeek(date:Date)->Bool{
+    public func isSameWeek(date:Date)->Bool{
         
         let equalWeeks:Bool = (self.weekOfMonth == date.weekOfMonth)
         return (equalWeeks && self.isSameMonth(date: date))
         
     }
     
-    func isSameMonth(date:Date)->Bool{
+    public func isSameMonth(date:Date)->Bool{
         
         let equalMonths:Bool = (self.month == date.month)
         return (self.isSameYear(date: date) && equalMonths)
         
     }
     
-    func isSameYear(date:Date)->Bool{
+    public func isSameYear(date:Date)->Bool{
         return (self.year == date.year)
     }
     
-    var isSunday:Bool{
+    public var isSunday:Bool{
         
         get{
             return (self.dayInWeek == 1)
@@ -450,7 +449,7 @@ public extension Date{
         
     }
     
-    var isMonday:Bool{
+    public var isMonday:Bool{
         
         get{
             return (self.dayInWeek == 2)
@@ -458,7 +457,7 @@ public extension Date{
         
     }
     
-    var isTuesday:Bool{
+    public var isTuesday:Bool{
         
         get{
             return (self.dayInWeek == 3)
@@ -466,7 +465,7 @@ public extension Date{
         
     }
     
-    var isWednesday:Bool{
+    public var isWednesday:Bool{
         
         get{
             return (self.dayInWeek == 4)
@@ -474,7 +473,7 @@ public extension Date{
         
     }
     
-    var isThursday:Bool{
+    public var isThursday:Bool{
         
         get{
             return (self.dayInWeek == 5)
@@ -482,7 +481,7 @@ public extension Date{
         
     }
     
-    var isFriday:Bool{
+    public var isFriday:Bool{
         
         get{
             return (self.dayInWeek == 6)
@@ -490,7 +489,7 @@ public extension Date{
         
     }
     
-    var isSaturday:Bool{
+    public var isSaturday:Bool{
         
         get{
             return (self.dayInWeek == 7)
@@ -498,7 +497,7 @@ public extension Date{
         
     }
     
-    var isWeekEnd:Bool{
+    public var isWeekEnd:Bool{
         
         get{
             return (self.isSunday || self.isSaturday)
@@ -506,7 +505,7 @@ public extension Date{
         
     }
     
-    var isWeekDay:Bool{
+    public var isWeekDay:Bool{
         
         get{
             return (self.isWeekEnd == false)
