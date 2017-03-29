@@ -8,28 +8,33 @@
 
 import Foundation
 
-extension FileManager {
+public extension FileManager {
 
-    var documentDirectoryPath:String{
+    class var documentDirectoryPath:String{
         
         get{
-            return ""
+            var paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [String]
+            return paths[0]
         }
         
     }
     
-    var applicationSupportDirectoryPath:String{
+    class var applicationSupportDirectoryPath:String{
         
         get{
-            return ""
+            var paths = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true) as [String]
+            return paths[0]
         }
         
     }
     
-    var cacheDirectoryPath:String{
+    class var cacheDirectoryPath:String{
         
         get{
-            return ""
+           
+            var paths = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true) as [String]
+            return paths[0]
+            
         }
         
     }
