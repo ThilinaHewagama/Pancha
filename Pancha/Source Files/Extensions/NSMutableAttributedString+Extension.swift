@@ -154,7 +154,7 @@ public extension NSMutableAttributedString{
     
     func setShadow(offset:CGSize,blurRadius:CGFloat, colour:UIColor?, alpha:CGFloat){
         
-        var shadow = NSShadow()
+        let shadow = NSShadow()
         shadow.shadowOffset = offset
         shadow.shadowBlurRadius = blurRadius
         
@@ -177,7 +177,7 @@ public extension NSMutableAttributedString{
     
     func setShadow(offset:CGSize,blurRadius:CGFloat, colour:UIColor?, alpha:CGFloat, range:NSRange){
         
-        var shadow = NSShadow()
+        let shadow = NSShadow()
         shadow.shadowOffset = offset
         shadow.shadowBlurRadius = blurRadius
         
